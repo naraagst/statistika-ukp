@@ -27,14 +27,12 @@ function petunjuk(){
 		document.getElementById("petunjuk").style="display:none";
 		document.getElementById("petunjuka").style="border-radius:10px";
 		document.getElementById("petunjuka").innerHTML="Klik untuk menampilkan petunjuk";
-		console.log("tes");
 		p=0;
 	}
 	else{
 		document.getElementById("petunjuk").style="display:block";
 		document.getElementById("petunjuka").style="border-radius:10px 10px 0px 0px";
 		document.getElementById("petunjuka").innerHTML="Klik untuk menyembunyikan petunjuk";
-		console.log("notes");
 		p=1;
 	}
 }

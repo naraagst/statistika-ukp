@@ -300,7 +300,7 @@ a{
 }
 .btn-group .active {
 	position:relative;
-	color: black;
+	color: black !important;
 	opacity:100%;
 	pointer-events: none;
 }
@@ -547,6 +547,9 @@ a{
 	margin-top: 5px;
 	display: none;
 }
+.btn-group3{
+	display: none;
+}
 
 @media only screen and (max-width: 500px) {
 	body{
@@ -567,7 +570,7 @@ a{
 	}
 	.konten{
 		width: 100%;
-		min-height: 100% !important;
+		height: auto !important;
 		background-color: rgb(255,255,255,0);
 	}
 	.materi2{
@@ -578,7 +581,7 @@ a{
 		height: auto !important;
 	}
 	.btn-group{
-		margin-left: 5%;
+		margin-left: 7%;
 	}
 	.btn-group a{
 		font-size:10px;
@@ -603,13 +606,32 @@ a{
 	#judulT, #isiT li{
 		font-size: 15px !important;
 	}
-	.materi, .conso{
+	.materi{
 		width:95%;
 		margin-left: 2%;
-		height: auto;
+		height: auto !important;
 	}
 	.iconmenu{
+		display: block !important;
+	}
+	.conso{
+		width:95% !important;
+		margin-left: 2%;
+		padding: 0;
+		height: auto !important;
+	}
+	.petunjuk{
+		margin:0 !important;
+		padding: 2px;
+	}
+	.petunjuk a, .petunjuk li{
+		font-size: 12px !important;
+	}
+	.btn-group3{
 		display: block;
+	}
+	.subkonten{
+		height: auto !important;
 	}
 }
 

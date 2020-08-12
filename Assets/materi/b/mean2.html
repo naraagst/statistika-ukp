@@ -6,7 +6,13 @@
 		<link href="../../css/materi2.css" rel="stylesheet">	
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<style>
+        @media only screen and (max-width: 500px) {
+        	#conso{
+        		display: none;
+        	}
+        }       
+   		</style>
 		<script>
 			window.onload = function awal(){
 				document.getElementById("dua").hidden = true;
@@ -22,12 +28,17 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
 			<div class="progressbar"></div>
 			<div class="subkonten">
+				<div class="btn-group3">
+					<a onclick="tabelMean2()" class="active" id="tabelMean2">Tabel</a>
+					<a onclick="isianMean2()" id="isianMean2">Isian</a>
+				</div>
 			<div class="materi">
 				<h2>Mean (Rata-Rata)</h2>
 				<div class="submateri">
@@ -247,6 +258,23 @@
 		<script src="../../js/isian1.js"></script>
 		<script type="text/javascript">
 			const next = document.querySelectorAll('.lanjut');
+			const isianMean = document.querySelector('#isianMean2');
+			const tabelMean = document.querySelector('#tabelMean2');
+			const materiMean = document.querySelector('.materi');
+			const consoMean = document.querySelector('#conso');
+
+			function isianMean2(){
+				isianMean.classList.add('active');
+				tabelMean.classList.remove('active');
+				consoMean.style.display = 'block';
+				materiMean.style.display = 'none'
+			}
+			function tabelMean2(){
+				isianMean.classList.remove('active');
+				tabelMean.classList.add('active');
+				consoMean.style.display = 'none';
+				materiMean.style.display = 'block'
+			}
 
 			next.forEach((item,index)=>{
 				next[index].addEventListener("click", function(e){
