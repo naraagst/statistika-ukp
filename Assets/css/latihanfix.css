@@ -1,0 +1,84 @@
+body{
+	position: fixed !important;
+}
+.slide{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:1;
+	display: none;
+	transition: opacity 0.5s;
+	min-height: 400px;
+}
+
+.active-slide{
+	display:block;
+	z-index:2;
+}
+
+#jwb{
+	position: relative;
+}
+
+.quiz-container{
+	position:relative;
+	min-height: 330px;
+	margin-top: 10px;
+	font-family: Muli;
+	overflow-y: hidden;
+}
+
+.progress{
+	width:95%;
+	background-color: lightgrey;
+	height:20px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	
+}
+
+.progress-salah{
+	background-color: red !important;
+}
+.progress-benar{
+	background-color: green !important;
+}
+.progress-ongoing{
+	border-bottom: 5px solid rgb(0,84,130);
+}
+
+.progress-bar{
+	background-color: rgb(0,180,220);
+	float: left;
+	height: 20px;
+	color: white;
+	font-family: Muli;
+	font-weight: bold;
+	transition-property: width;
+ 	transition-duration: 1s;
+	transition-timing-function: ease-in;
+	width:20%;
+}
+
+#progress-bar1{
+	border-radius: 5px 0px 0px 5px;
+}
+#progress-bar5{
+	border-radius: 0px 5px 5px 0px;
+}
+
+.gambartombol{
+	width:100%;
+
+}
+
+.gbrBtn{
+	width:12%;
+	border:none;
+	margin-top: 10px;
+}
+
+.marginminus{
+	margin-top: -100px !important;
+}

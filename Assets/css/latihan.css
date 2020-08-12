@@ -1,0 +1,28 @@
+.slide{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	z-index:1;
+	display: none;
+	transition: opacity 0.5s;
+	min-height: 400px;
+}
+
+.active-slide{
+	display:block;
+	z-index:2;
+}
+
+#jwb{
+	position: relative;
+}
+
+.quiz-container{
+	position:relative;
+	min-height: 330px;
+	margin-top: 10px;
+	font-family: Muli;
+	overflow-y: hidden;
+}
+
