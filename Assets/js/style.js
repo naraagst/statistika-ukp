@@ -19,6 +19,9 @@ function dropdown5() {
 function dropdown6() {
 				document.getElementById("myDropdown6").classList.toggle("show");
 			}
+function sidebar() {
+  document.getElementById("sidebar").classList.toggle("show");
+}
 function petunjuk(){
 	if(p==1){
 		document.getElementById("petunjuk").style="display:none";

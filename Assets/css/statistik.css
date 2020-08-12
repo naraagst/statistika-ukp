@@ -73,7 +73,6 @@ a{
 	border: 3px solid white;
 }
 .header i{
-	margin-top:10px;
 	font-size:30px;
 }
 .tooltip {
@@ -185,7 +184,7 @@ a{
 }
 
 .show{
-	display:block;
+	display:block !important;
 }
 
 .hide{
@@ -541,6 +540,14 @@ a{
 	font-style: italic;
 }
 
+.iconmenu{
+	color: rgb(0,156,255);
+	float: right;
+	margin-right: 10%;
+	margin-top: 5px;
+	display: none;
+}
+
 @media only screen and (max-width: 500px) {
 	body{
 		height: auto;
@@ -553,6 +560,9 @@ a{
 		position: sticky;
 	}
 	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: auto !important;
 		display: none;
 	}
 	.konten{
@@ -597,6 +607,9 @@ a{
 		width:95%;
 		margin-left: 2%;
 		height: auto;
+	}
+	.iconmenu{
+		display: block;
 	}
 }
 
