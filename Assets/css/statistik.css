@@ -541,6 +541,65 @@ a{
 	font-style: italic;
 }
 
+@media only screen and (max-width: 500px) {
+	body{
+		height: auto;
+		overflow-y: scroll;
+		position: relative;
+		background-color: rgb(0,156,255,0.2);
+	}
+	.header{
+		height: 40px;
+		position: sticky;
+	}
+	.sidebar{
+		display: none;
+	}
+	.konten{
+		width: 100%;
+		min-height: 100% !important;
+		background-color: rgb(255,255,255,0);
+	}
+	.materi2{
+		margin-left:2% !important;
+		height: 95% !important;
+	}
+	.submateri2{
+		height: auto !important;
+	}
+	.btn-group{
+		margin-left: 5%;
+	}
+	.btn-group a{
+		font-size:10px;
+	}
+	.materi p, .materi ol, .conso p, .materi2 p, .conso ol, .soal p{
+	font-size: 15px;
+	margin:20px;
+	}
+	.progressbar{
+		width: 100%;
+	}
+	.kemajuan{
+		width:78%;
+	}
+	.progteks{
+		font-size: 12px;
+		margin:2px 10px 0px 3px;
+	}
+	#logo{
+		width:auto;
+	}
+	#judulT, #isiT li{
+		font-size: 15px !important;
+	}
+	.materi, .conso{
+		width:95%;
+		margin-left: 2%;
+		height: auto;
+	}
+}
+
 ::-webkit-scrollbar{
 	width:11px;
 	background: #ffffff;
