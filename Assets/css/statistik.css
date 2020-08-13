@@ -753,6 +753,45 @@ a{
 	}
 }
 
+@media only screen and (orientation: landscape) {
+  body{
+		height: auto;
+		width: 100% !important;
+		overflow-y: scroll !important;
+		overflow-x: hidden !important;
+		position: relative;
+		background-color: rgb(0,156,255,0.2);
+	}
+	.header{
+		height: 40px;
+		position: sticky;
+	}
+	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: auto !important;
+		display: none;
+	}
+	.konten{
+		width: 100%;
+		height: auto !important;
+		background-color: rgb(255,255,255,0);
+	}
+	.subkonten{
+		width: 100% !important;
+	}
+	.materi{
+		width: 46% !important;
+	}
+	.conso{
+		width: 46% !important;
+	}
+	.materi2{
+		margin-left:2% !important;
+		height: 45% !important;
+	}
+}
+
 ::-webkit-scrollbar{
 	width:11px;
 	background: #ffffff;
