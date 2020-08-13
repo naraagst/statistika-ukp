@@ -498,9 +498,11 @@
 	cursor: pointer;
 	float: left;
 	padding:15px;
-	width:41%;
+	width:41% !important;
 	color: black;
-
+}
+#isianMean2{
+	float:right !important;
 }
 .btn-group3 a:hover {
 	background-color: rgb(0,0,0, 0.1) !important;
@@ -524,7 +526,7 @@
 }
 .btn-group3{
 	padding-left: 5px;
-	width: 97%;
+	width: 97% !important;
 }
 .soalmodus p{
 	text-align: center !important;
