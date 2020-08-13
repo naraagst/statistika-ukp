@@ -36,6 +36,10 @@ const getPagesClass = (path) => {
   return this.location.pathname.substr(17) === path ? " active" : "";
 };
 
+const getPagesClassMean1 = (path) => {
+  return this.location.pathname.substr(17,5) === path ? " active" : "";
+};
+
 const getUnlockClass = (path) => {
   return this.location.pathname.substr(17) === path ? " lanjut" : "";
 };
@@ -105,7 +109,7 @@ if (key === "mea"){
 	document.querySelector(".halaman").innerHTML=`
 				<div class="btn-group">
 					<a href="mean${kurang}.html" class="${getDisabledClass("1")}"><< Sebelumnya</a>
-					<a href="mean1.html" class="${getPagesClass("mean1.html")} disabledhal" id="mean1">1</a>
+					<a href="mean1.html" class="${getPagesClassMean1("mean1")} disabledhal" id="mean1">1</a>
 					<a href="mean2.html" class="${getPagesClass("mean2.html")} ${getUnlockClass("mean1.html")} disabledhal" id="mean2">2</a>
 					<a href="mean3.html" class="${getPagesClass("mean3.html")} ${getUnlockClass("mean2.html")} disabledhal" id="mean3">3</a>
 					<a href="mean4.html" class="${getPagesClass("mean4.html")} ${getUnlockClass("mean3.html")} disabledhal" id="mean4">4</a>

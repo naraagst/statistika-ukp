@@ -550,11 +550,17 @@ a{
 .btn-group3{
 	display: none;
 }
+.disamping{
+	display: inline-block;
+}
+.dibawah{
+	display: none;
+}
 
 @media only screen and (max-width: 500px) {
 	body{
 		height: auto;
-		overflow-y: scroll;
+		overflow-y: scroll !important;
 		position: relative;
 		background-color: rgb(0,156,255,0.2);
 	}
@@ -633,6 +639,48 @@ a{
 	.subkonten{
 		height: auto !important;
 	}
+	#petunjuka{
+		font-size: 14px !important;
+	}
+	.isian{
+		margin:5px;
+	}
+	.angka, .angka td{
+		line-height: 15px !important;
+	}
+	.langkahmean2{
+		font-size: 3vw !important;
+	}
+	.tiga td, .tiga input{
+	font-size: 3vw !important;
+	}
+	.langkahmean3{
+		width:60px !important;
+	}
+	#div1,#div2,#div3 {
+  		width: 130px !important;
+	}
+	#drag1,#drag2,#drag3{
+		font-size:13px !important;
+		width:130px !important;
+	}
+	.cek{
+		font-size: 3vw;
+	}
+	.btn-group2 a{
+		width:40% !important;
+		font-size: 4vw !important;
+	}
+	.materi{
+		margin-bottom: 5px;
+	}
+	.disamping{
+	display: none;
+	}
+	.dibawah{
+		display: inline-block;
+	}
+
 }
 
 ::-webkit-scrollbar{
