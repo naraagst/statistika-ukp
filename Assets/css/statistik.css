@@ -550,16 +550,29 @@ a{
 .btn-group3{
 	display: none;
 }
-.disamping{
+.laptop{
 	display: inline-block;
 }
-.dibawah{
+.hp{
+	display: none;
+}
+#hasilddbenar{
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+	display: none;
+}
+#hasilddsalah{
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
 	display: none;
 }
 
 @media only screen and (max-width: 500px) {
 	body{
 		height: auto;
+		width: 100% !important;
 		overflow-y: scroll !important;
 		position: relative;
 		background-color: rgb(0,156,255,0.2);
@@ -588,6 +601,7 @@ a{
 	}
 	.btn-group{
 		margin-left: 7%;
+		margin-top:10px !important;
 	}
 	.btn-group a{
 		font-size:10px;
@@ -625,6 +639,7 @@ a{
 		margin-left: 2%;
 		padding: 0;
 		height: auto !important;
+		margin-bottom: 5px !important;
 	}
 	.petunjuk{
 		margin:0 !important;
@@ -659,6 +674,7 @@ a{
 	}
 	#div1,#div2,#div3 {
   		width: 130px !important;
+  		padding: 0px !important;
 	}
 	#drag1,#drag2,#drag3{
 		font-size:13px !important;
@@ -674,11 +690,61 @@ a{
 	.materi{
 		margin-bottom: 5px;
 	}
-	.disamping{
+	.laptop{
 	display: none;
 	}
-	.dibawah{
+	.hp{
 		display: inline-block;
+	}
+	#rumusmean td, #rumusmean table{
+	font-size:3vw !important;
+	}
+	.rataratamean{
+		width: auto !important;
+	}
+	#hasilddsalah, #hasilddbenar{
+		font-size: 3vw;
+	}
+	.nextSoal, .prevSoal, .cekdisabled{
+		width:auto !important;
+	}
+	#rumus{
+		height: auto !important;
+	}
+	.mean4 h3{
+		width: 100%;
+		text-align: center;
+		padding: 0 !important;
+	}
+	.rumusmeanfrek{
+		margin-left: 6% !important;
+	}
+	.frame{
+		margin:5px !important;
+	}
+	.consonav1{
+		font-size: 14px !important;
+	}
+	.mean5{
+		height: auto !important;
+	}
+	.fontt{
+		font-size: 13px !important;
+	}
+	.submateri p{
+		margin-bottom: 5px !important;
+	}
+	.median li{
+		font-size: 15px !important;
+	}
+	.isian_median input{
+		width:30px !important;
+		padding: 1px !important;
+		font-size:13px !important;
+	}
+	#tengah button, #tengah2 button, #tengah3 button{
+		font-size:14px !important;
+		padding:3px !important;
 	}
 
 }

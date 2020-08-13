@@ -28,8 +28,9 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
 			<div class="progressbar"></div>
@@ -40,6 +41,7 @@
 					<p>
 						Median merupakan salah satu ukuran pemusatan data. Apabila data yang sudah terkumpul diurutkan, maka <b>nilai data yang terletak di tengah (nilai tengah data)</b> disebut <i>median</i>.
 					</p>
+					<p class="hp scroll">Setelah menekan tombol "lihat contoh", scroll ke bawah untuk mencoba contoh</p>
 					<ul>
 						<li>
 						Jika banyak data yang sudah terurut <b>ganjil</b>, maka mediannya adalah nilai data yang terletak tepat di tengah-tengah, yang membagi data menjadi dua bagian yang sama. Dengan kata lain, median terletak pada data ke-$\frac{n+1}{2}$

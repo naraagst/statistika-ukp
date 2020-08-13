@@ -28,8 +28,9 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
 			<div class="progressbar"></div>
@@ -41,9 +42,9 @@
 						<a href=javascript:void(0) onclick="petunjuk()"><p id="petunjuka">Klik untuk menyembunyikan petunjuk</p>
 						<div id="petunjuk">
 							<ul>
-							<li>Susunlah poin-poin dibawah dengan cara men<i>drag</i> setiap poin ke kotak yang tersedia hingga membentuk rumus umum rata-rata(mean) yang benar. </li>
+							<li>Susunlah poin-poin dibawah dengan cara <span class="laptop">men<i>drag</i></span><span class="hp">tap dan tahan kemudian pindahkan</span> setiap poin ke kotak yang tersedia hingga membentuk rumus umum rata-rata(mean) yang benar. </li>
 							<li>Klik tombol <b>Cek Jawaban</b> untuk memeriksa apakah jawaban sudah benar.</li>
-							<li>Jika seluruh poin telah tersusun dengan benar, maka contoh soal dan latihan <span class="disamping">disamping</span> <span class="dibawah">dibawah</span> dapat diakses</li>
+							<li>Jika seluruh poin telah tersusun dengan benar, maka contoh soal dan latihan <span class="laptop">disamping</span> <span class="hp">dibawah</span> dapat diakses</li>
 							</ul>
 						</div>
 						</a>
@@ -76,9 +77,11 @@
 						<div draggable="true" ondragstart="drag(event)" id="drag2" class="grab" height="50px">Jumlah Seluruh Data</div>
 						<div draggable="true" ondragstart="drag(event)" id="drag3" class="grab" height="50px">Banyak Data</div>
 						<span id="note"></span>
-						<p id="hasildd"><p>
+						
 					</div>
 					</div>
+					<p id="hasilddbenar">Jawabanmu benar. Silahkan pelajari contoh soal dan latihan di samping.<p>
+						<p id="hasilddsalah">Jawaban masih salah. Silahkan tekan tombol reset dan coba lagi.<p>
 					<center>
 					<button class="cek" onclick="cek()" id="cekdd">Cek Jawaban</button>
 					<button class="cek" onclick="reset1()" id="resetdd">Reset</button>
