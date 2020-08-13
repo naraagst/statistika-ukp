@@ -531,6 +531,7 @@ a{
 	opacity: 70% !important;
 	cursor:not-allowed !important;
 	color:white !important;
+	pointer-events: none !important;
 }
 
 .caption{
