@@ -596,7 +596,7 @@ a{
 	}
 	.materi2{
 		margin-left:2% !important;
-		height: 95% !important;
+		height: auto !important;
 	}
 	.submateri2{
 		height: auto !important;
