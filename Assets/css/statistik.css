@@ -632,6 +632,7 @@ a{
 		width:97%;
 		margin-left: 2%;
 		height: auto !important;
+		padding-bottom: 10px;
 	}
 	.iconmenu{
 		display: block !important;
@@ -639,7 +640,7 @@ a{
 	.conso{
 		width:95% !important;
 		margin-left: 2%;
-		padding: 0;
+		padding: 0px 0px 10px 0px;
 		height: auto !important;
 		margin-bottom: 5px !important;
 	}
@@ -753,7 +754,18 @@ a{
 	}
 }
 
+@media only screen and (max-width: 372px) {
+	.btn-group3 a{
+		width: 38% !important;
+	}
+	.btn-group2{
+		width: 103% !important;
+	}
+	.btn-group{
+		margin-left: 1%;
+	}
 
+}
 ::-webkit-scrollbar{
 	width:11px;
 	background: #ffffff;

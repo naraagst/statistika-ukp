@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>STATISTIKA</title>
+
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script>
+
+			window.onload = function e() {
+				document.getElementById("ulangi").hidden = true;
+            	document.getElementById("lihat").hidden = true;
+            	// document.getElementById("hasilbenar").hidden=true;
+            	// document.getElementById("hasilsalah").hidden=true;
+            	document.getElementById("jwb1a").hidden = true;
+				document.getElementById("jwb1b").hidden = true;
+				document.getElementById("jwb2a").hidden = true;
+				document.getElementById("jwb2b").hidden = true;
+				document.getElementById("jwb3a").hidden = true;
+				document.getElementById("jwb3b").hidden = true;
+				document.getElementById("jwb4a").hidden = true;
+				document.getElementById("jwb4b").hidden = true;
+				document.getElementById("jwb5a").hidden = true;
+				document.getElementById("jwb5b").hidden = true;
+				document.getElementById("jwb6a").hidden = true;
+				document.getElementById("jwb6b").hidden = true;
+				document.getElementById("jwb7a").hidden = true;
+				document.getElementById("jwb7b").hidden = true;
+				document.getElementById("jwb8a").hidden = true;
+				document.getElementById("jwb8b").hidden = true;
+				document.getElementById("jwb_analisis5").hidden = true;
+				
+			var chart5 = new CanvasJS.Chart("chartContainer5", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Liter"
+				},
+				axisX: {
+					title: "Waktu (Jam)"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Perjalanan dari kota M ke kota N",     
+					dataPoints: [      
+						{ x: 4, y: 40, indexLabel: "A" },
+						{ x: 5, y: 20, indexLabel: "B" },
+						{ x: 6, y: 20, indexLabel: "C" },
+						{ x: 8, y: 10},
+						{ x: 8, y: 60, indexLabel: "D" },
+						{ x: 9, y: 50, indexLabel: "E" },
+						{ x: 10, y: 40, indexLabel: "F" },
+						{ x: 12, y: 10, indexLabel: "G" }
+					]
+				}]
+			});
+			chart5.render();
+
+			}
+
+	</script>
+	</head>
+	<body>
+		<div class="header">
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+		</div>
+		<div class="sidebar">
+		</div>
+		<div class="konten">
+			<div class="subkonten">
+			<div class="materi" >
+				<h2>Menganalisis Data</h2>
+				<div class="submateri" id="submateri">
+				<p>Perhatikan Diagram 3 disamping!</p>
+				<p>
+					Diagram 3 di samping menyajikan penggunaan bahan bakar terhadap waktu (dalam jam) pada perjalanan sebuah mobil dari kota <i>M</i> ke kota <i>N</i>. Gunakan informasi pada Diagram 3 untuk menjawab pertanyaan berikut.
+				</p>
+				<form name="form">
+					<div class="isian">
+					<ol>
+						<li>
+							Berapa liter bahan bakar yang dihabiskan dalam perjalanan:
+							<div class="subisi">
+							<table>
+								<tr>
+									<td>a.</td>
+									<td>Dari titik <i>A</i> ke titik <i>B</i> ?</td>
+									<td>
+										<input type="text" class="jawabanSiswa" name="jwb1">liter
+										<font class="hsl1" id="jwb1a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb1b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>b.</td>
+									<td>Dari titik <i>C</i> ke titik <i>D</i> ?</td>
+									<td>
+										<input type="text" class="jawabanSiswa" name="jwb2">liter
+										<font class="hsl1" id="jwb2a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb2b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>c.</td>
+									<td>Dari titik <i>D</i> ke titik <i>E</i> ?</td>
+									<td>
+										<input type="text" class="jawabanSiswa" name="jwb3">liter
+										<font class="hsl1" id="jwb3a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb3b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>d.</td>
+									<td>Dari titik <i>E</i> ke titik <i>F</i> ?</td>
+									<td>
+										<input type="text" class="jawabanSiswa" name="jwb4">liter
+										<font class="hsl1" id="jwb4a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb4b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+								<tr>
+									<td>e.</td>
+									<td>Dari titik <i>F</i> ke titik <i>G</i> ?</td>
+									<td>
+										<input type="text" class="jawabanSiswa" name="jwb5">liter
+										<font class="hsl1" id="jwb5a"><i class="fas fa-check" style="color:green;"></i></font>
+										<font class="hsl1" id="jwb5b"><i class="fas fa-times" style="color:red;"></i></font>
+									</td>
+								</tr>
+							</table>
+							</div>
+						</li>
+						<li>
+							Berapa liter bahan bakar total yang dihabiskan dalam perjalanan tersebut ?
+							<input type="text" class="jawabanSiswa" name="jwb6">liter
+							<font class="hsl1" id="jwb6a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb6b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+						<li>
+							Berapa lama perjalanan dari kota <i>M</i> ke kota <i>N</i> ?
+							<input type="text" class="jawabanSiswa" name="jwb7">jam
+							<font class="hsl1" id="jwb7a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb7b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+						<li>
+							Berapa banyak bahan bakar yang dihabiskan dari titik <i>B</i> ke titik <i>C</i> ?
+							<input type="text" class="jawabanSiswa" name="jwb8">liter
+							<font class="hsl1" id="jwb8a"><i class="fas fa-check" style="color:green;"></i></font>
+							<font class="hsl1" id="jwb8b"><i class="fas fa-times" style="color:red;"></i></font>
+						</li>
+					</ol>
+					<p id="hasilbenar" style="color: green; font-weight: bold;"></p>
+					<p id="hasilsalah" style="color: red; font-weight: bold;margin-top: -15px"></p>
+					<input type="button" name="submit" onclick="cek1()" value="Cek Jawaban" class="cek" style="margin-left:25px;">
+					<div id="isi" style="float: right; font-size: 24px; font-weight:bold; color:red;"></div>
+					<input type="reset" name="submit" onclick="ulang()" value="Ulang" class="cek" id="ulangi">
+					<input type="button" name="submit" onclick="lihatJawaban()" value="Lihat Jawaban" class="cek" id="lihat">
+					</div>
+				</form>
+					<div id="jwb_analisis5" style="width:100%;">
+							<ol>
+								<li>
+									Bahan bakar yang dihabiskan dalam perjalanan :
+									<ol type="a">
+										<li>Dari titik <i>A</i> ke titik <i>B</i> (20 liter)</li>
+										<li>Dari titik <i>C</i> ke titik <i>D</i> (10 liter)</li>
+										<li>Dari titik <i>D</i> ke titik <i>E</i> (10 liter)</li>
+										<li>Dari titik <i>E</i> ke titik <i>F</i> (10 liter)</li>
+										<li>Dari titik <i>F</i> ke titik <i>G</i> (30 liter)</li>
+									</ol>
+								</li>
+								<li style="margin-bottom:10px;"> 
+									Jumlah liter bahan bakar total yang dihabiskan dalam perjalanan tersebut adalah 80 liter.
+								</li>
+								<li style="margin-bottom:10px;">
+									Lama perjalanan dari kota <i>M</i> ke kota <i>N</i> adalah 12 jam.
+								</li>
+								<li style="margin-bottom:10px;">
+									Tidak ada bahan bakar yang terpakai diantara kedua titik. Kemungkinan pengendara mobil sedang istirahat atau tidak dalam keadaan berkendara, hal ini terlihat dari tidak ada perubahan pada diagram dari kedua titik.
+								</li>
+							</ol>
+						</div>
+				</div>
+				
+			</div>
+			<div class="conso">
+				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
+				<div id="chartContainer5" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p class="caption">Diagram 3. Data penggunaan bahan bakar</p>
+				<p style="color: red; font-size: 14;">*catatan: arahkan kursor ke setiap titik pada diagram untuk mengetahui jumlah data</p>
+			</div>
+			</div>
+			<div class="halaman">
+				<div class="btn-group">
+					<a href="analisis4.html"><< Sebelumnya</a>
+					<a href="analisis1.html">1</a>
+					<a href="analisis2.html" >2</a>
+					<a href="analisis4.html">3</a>
+					<a href="#" class="active">4</a>
+					<a href="evaluasiA" style="width:100px">Selanjutnya</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/sidebar.js"></script>
+		<script src="../../js/unlock-pages.js"></script>
+		<script src="../../js/analisis5.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="../../js/style.js"></script>
+		<script src="../../js/canvasjs.min.js"></script>
+	</body>
+	
+</html>
