@@ -18,13 +18,13 @@ if(score >= 65) {
     nextt.style.display='inline-block'
     ulangi.style.display='none'
     kett.style.color='green'
-    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke materi selanjutnya.'
+    kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke Latihan.'
 } else {
     note = "Tidak Lulus"
     nextt.style.display='none'
     ulangi.style.display='inline-block'
     kett.style.color='red'
-    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut ke materi selanjutnya'
+    kett.innerHTML = 'Sayang sekali skor anda belum memenuhi untuk dapat lanjut'
 }
 score = score < 100 ? score.toFixed(2) : score
 
@@ -34,22 +34,22 @@ result.wrongAnswer = wrongAnswer
 result.scoreUser = score
 result.noteUser = note
 
-if(localStorage && localStorage.getItem('quizA')) {
-    quizResults = JSON.parse(localStorage.getItem('quizA'))
+if(localStorage && localStorage.getItem('quizC')) {
+    quizResults = JSON.parse(localStorage.getItem('quizC'))
 
     if(result.correctAnswer != "" && result.wrongAnswer != "") {
         quizResults.results.push(result)
     }
 
-    localStorage.setItem('quizA', JSON.stringify(quizResults))
+    localStorage.setItem('quizC', JSON.stringify(quizResults))
     clearResults()
 } else {
-    localStorage.setItem('quizA', JSON.stringify(quizResults))
+    localStorage.setItem('quizC', JSON.stringify(quizResults))
     if(result.correctAnswer != "" && result.wrongAnswer != "") {
         quizResults.results.push(result)
     }
 
-    localStorage.setItem('quizA', JSON.stringify(quizResults))
+    localStorage.setItem('quizC', JSON.stringify(quizResults))
     clearResults()
 }
 
@@ -85,10 +85,10 @@ function newResults(numCorrect, numWrong, score) {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    let quizA = quizResults["results"].length
+    let quizC = quizResults["results"].length
     let testNumber = 1
 
-    for(let i=0; i<quizA; i++) {
+    for(let i=0; i<quizC; i++) {
         if(quizResults["results"][i].correctAnswer != "" && quizResults["results"][i].wrongAnswer != "") {
             resultsHistory(testNumber, quizResults["results"][i].nameUser, quizResults["results"][i].correctAnswer, quizResults["results"][i].wrongAnswer, quizResults["results"][i].scoreUser, quizResults["results"][i].noteUser)
         }
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     if(result.nameUser != ""){
-        newResults(quizResults["results"][quizA-1].correctAnswer, quizResults["results"][quizA-1].wrongAnswer, quizResults["results"][quizA-1].scoreUser)
+        newResults(quizResults["results"][quizC-1].correctAnswer, quizResults["results"][quizC-1].wrongAnswer, quizResults["results"][quizC-1].scoreUser)
     }
 
     let tryAgain = document.querySelector("#try-again")
@@ -105,20 +105,13 @@ document.addEventListener("DOMContentLoaded", function(){
     })
     
     nextt.addEventListener("click", function(){
-        e.preventDefault();
-
-        localStorage.setItem("mean1","mean1");
-        localStorage.setItem("materi2","materi2");
-        
-        if(localStorage.getItem("progress") <=0){
-            localStorage.setItem("progress",0)
-        }
-        location.href = 'Assets/Materi/b/mean1.html'
+        localStorage.setItem("latihan","latihan");
+        location.href = '../../latihan'
         clearResults()
     })
 
     ulangi.addEventListener("click", function(){
-        location.href = '../analisis1.html'
+        location.href = '../jangkauan1.html'
         clearResults()
     })
 })

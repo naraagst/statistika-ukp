@@ -3,12 +3,13 @@
 		<title>STATISTIKA</title>
 
 		<!-- <link href="css/statistik.css" rel="stylesheet"> -->
-		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+		
 		<link rel="shortcut icon" href="Assets/gambar/analytics.png">
 		<link rel="stylesheet" href="Assets/css/main.css">	
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+		
 	</head>
 	<body style="overflow:hidden">
 		
@@ -52,13 +53,12 @@
       document.querySelector("#btnMateri").addEventListener("click", function(e){
       	e.preventDefault();
 
-      	localStorage.setItem("mean1","mean1");
-      	localStorage.setItem("materi2","materi2");
+      	localStorage.setItem("materi1","materi1");
       	
       	if(localStorage.getItem("progress") <=0){
       		localStorage.setItem("progress",0)
       	}
-      	location.href = 'Assets/Materi/b/mean1.html'
+      	location.href = 'Assets/Materi/a/analisis1.html'
       })
  	 </script>
  	 

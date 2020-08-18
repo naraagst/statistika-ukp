@@ -128,7 +128,7 @@ if (key === "mea"){
 	if (tambah==4){ nextMateri = "modus1.html" } 
 	else {nextMateri = "median"+tambah+".html";}
 
-	if (kurang==1){ prevMateri = "mean4.html" } 
+	if (kurang==0){ prevMateri = "mean4.html" } 
 	else {prevMateri = "median"+kurang+".html";}	
 
 	document.querySelector(".halaman").innerHTML=`
@@ -148,7 +148,7 @@ if (key === "mea"){
 	if (tambah==3){ nextMateri = "evaluasiB" } 
 	else {nextMateri = "modus"+tambah+".html";}
 
-	if (kurang==1){ prevMateri = "median4.html" } 
+	if (kurang==0){ prevMateri = "median4.html" } 
 	else {prevMateri = "modus"+kurang+".html";}
 
 	document.querySelector(".halaman").innerHTML=`

@@ -11,7 +11,10 @@ let getPage = (idName, localName) => {
   }
 };
 
+getPage(materi1, "materi1");
 getPage(materi2, "materi2");
+getPage(materi3, "materi3");
+getPage(latihan, "latihan");
 getPage(mean, "mean1");
 getPage(median, "mean4");
 getPage(modus, "median4");
@@ -19,7 +22,7 @@ getPage(kuisb, "modus3");
 getPage(unduh, "unduh");
 
 const kemajuan = localStorage.getItem("progress")
-const tampilProgress = kemajuan * (100/13)
+const tampilProgress = kemajuan * (100/27)
 const convert = Math.ceil(tampilProgress)
 console.log(convert)
 const kemajuanBar = document.querySelector(".progAtas")

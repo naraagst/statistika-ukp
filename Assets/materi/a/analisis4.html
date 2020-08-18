@@ -43,10 +43,12 @@
 	<body>
 		<div class="header">
 			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
+			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
 		</div>
-		<div class="sidebar">
+		<div class="sidebar" id="sidebar">
 		</div>
 		<div class="konten">
+			<div class="progressbar"></div>
 			<div class="subkonten">
 			<div class="materi">
 				<h2>Menganalisis Data</h2>
@@ -197,7 +199,22 @@
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script src="../../js/style.js"></script>
 		<script src="../../js/canvasjs.min.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
 
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('ana4','ana4');
+				if(localStorage.getItem("progress") <=3){
+		      		localStorage.setItem("progress",3)
+		      	}
+
+		      	location.href = 'analisis5.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

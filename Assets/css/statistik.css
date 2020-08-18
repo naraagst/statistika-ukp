@@ -590,7 +590,7 @@ a{
 		display: none;
 	}
 	.konten{
-		width: 100%;
+		width: 100% !important;
 		height: auto !important;
 		background-color: rgb(255,255,255,0);
 	}
@@ -604,6 +604,16 @@ a{
 	.btn-group{
 		margin-left: 7%;
 		margin-top:10px !important;
+	}
+	.tabel{
+		width: 100% !important;
+	}
+	.isian_median table{
+		width: 100% !important;
+	}
+	.isian_median td,.isian_median tr{
+		font-size: 14px !important;
+		width: auto !important;
 	}
 	.btn-group a{
 		font-size:10px;
@@ -643,6 +653,7 @@ a{
 		padding: 0px 0px 10px 0px;
 		height: auto !important;
 		margin-bottom: 5px !important;
+		overflow-x: auto !important;
 	}
 	.petunjuk{
 		margin:0 !important;
@@ -750,6 +761,9 @@ a{
 		padding:3px !important;
 	}
 	#ddrumusmean{
+		height: auto !important;
+	}
+	.submateri{
 		height: auto !important;
 	}
 }
