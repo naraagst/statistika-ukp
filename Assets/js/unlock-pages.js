@@ -2,10 +2,12 @@ const materi1 = document.querySelector("#materi1");
 const materi2 = document.querySelector("#materi2");
 const materi3 = document.querySelector("#materi3");
 const latihan = document.querySelector("#latihan");
+const kuisa = document.querySelector("#kuisa");
 
 let getPage = (idName, localName) => {
   const getLocal = localStorage.getItem(localName);
-  // console.log(idName);
+   console.log(idName);
+  console.log(localName);
   if (getLocal != null) {
       idName.classList.remove("disabled");
   }
@@ -19,6 +21,7 @@ getPage(mean, "mean1");
 getPage(median, "mean4");
 getPage(modus, "median4");
 getPage(kuisb, "modus3");
+getPage(kuisa, "ana4");
 getPage(unduh, "unduh");
 
 const kemajuan = localStorage.getItem("progress")
@@ -44,10 +47,14 @@ const median4 = document.querySelector("#median4");
 const modus1 = document.querySelector("#modus1");
 const modus2 = document.querySelector("#modus2");
 const modus3 = document.querySelector("#modus3");
+const analisis1 = document.querySelector("#analisis1");
+const analisis2 = document.querySelector("#analisis2");
+const analisis3 = document.querySelector("#analisis3");
+const analisis4 = document.querySelector("#analisis4");
 
 let getPage2 = (idName, localName) => {
   const getLocal = localStorage.getItem(localName);
-  // console.log(idName);
+ 
   if (getLocal != null) {
       idName.classList.remove("disabledhal");
   }
@@ -68,6 +75,11 @@ if(key === "mea"){
 	getPage2(modus1, "median4");
 	getPage2(modus2, "modus1");
 	getPage2(modus3, "modus2");
+} else if (key === "ana"){
+	getPage2(analisis1, "materi1");
+	getPage2(analisis2, "materi1");
+	getPage2(analisis3, "ana2");
+	getPage2(analisis4, "ana3");
 }
 
 // // _______________________________________________________________________________________________________

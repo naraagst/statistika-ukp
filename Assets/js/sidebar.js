@@ -58,7 +58,7 @@ document.querySelector(".sidebar").innerHTML = `
 					</a>
 					<div class="dropdown ${getShowClass("a")}" id="myDropdown6">
 					  <a href="../a/analisis1.html" class="${getNavLinkClasses("ana")}">Materi</a>
-				      <a href="../a/evaluasiA" class="${getNavLinkClass("/Assets/materi/a/evaluasiA/index.html")}">Kuis</a>
+				      <a href="../a/evaluasiA" class="${getNavLinkClass("/Assets/materi/a/evaluasiA/index.html")} ${getUnlockClass("analisis5.html")} disabled" id="kuisa">Kuis</a>
 				    </div>
 				</li>
 				<li class="dropdown1 ${getChapClass("b")} disabled" id="materi2">
@@ -157,6 +157,26 @@ if (key === "mea"){
 					<a href="modus1.html" class="${getPagesClass("modus1.html")} disabledhal" id="modus1">1</a>
 					<a href="modus2.html" class="${getPagesClass("modus2.html")} ${getUnlockClass("modus1.html")} disabledhal" id="modus2">2</a>
 					<a href="modus3.html" class="${getPagesClass("modus3.html")} ${getUnlockClass("modus2.html")} disabledhal" id="modus3">3</a>
+					<a href="${nextMateri}" class="lanjut">Selanjutnya >></a>
+				</div>
+`
+} else if (key === "ana"){
+	tambah = Number(this.location.pathname.substr(25, 1))+1;
+	kurang = Number(this.location.pathname.substr(25, 1))-1;
+
+	if (tambah==4){ nextMateri = "evaluasiA" } 
+	else {nextMateri = "analisis"+tambah+".html";}
+
+	if (kurang==0){ prevMateri = "#" } 
+	else {prevMateri = "analisis"+kurang+".html";}
+
+	document.querySelector(".halaman").innerHTML=`
+				<div class="btn-group">
+					<a href="${prevMateri}"><< Sebelumnya</a>
+					<a href="analisis1.html" class="${getPagesClass("analisis1.html")} disabledhal" id="analisis1">1</a>
+					<a href="analisis2.html" class="${getPagesClass("analisis2.html")} ${getUnlockClass("analisis1.html")} disabledhal" id="analisis2">2</a>
+					<a href="analisis3.html" class="${getPagesClass("analisis4.html")} ${getUnlockClass("analisis2.html")} disabledhal" id="analisis3">3</a>
+					<a href="analisis4.html" class="${getPagesClass("analisis5.html")} ${getUnlockClass("analisis4.html")} disabledhal" id="analisis4">4</a>
 					<a href="${nextMateri}" class="lanjut">Selanjutnya >></a>
 				</div>
 `

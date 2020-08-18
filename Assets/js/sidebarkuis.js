@@ -1,3 +1,5 @@
+let key = this.location.pathname.substr(17,3);
+
 const getNavLinkClass = (path) => {
   return this.location.pathname === path ? " active" : "";
 };
@@ -21,7 +23,7 @@ document.querySelector(".sidebar").innerHTML = `
 					</a>
 					<div class="dropdown ${getShowClass("a")}" id="myDropdown6">
 					  <a href="../../a/analisis1.html" class="${getNavLinkClass("/Assets/materi/a/analisis1.html")}">Materi</a>
-				      <a href="../../a/evaluasiA" class="${getChapClass("a")}">Kuis</a>
+				      <a href="../../a/evaluasiA" class="${getChapClass("a")} disabled" id="kuisa">Kuis</a>
 				    </div>
 				</li>
 				<li class="dropdown1 ${getChapClass("b")} disabled"  id="materi2">
