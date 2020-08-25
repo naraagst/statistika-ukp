@@ -811,6 +811,50 @@ a{
 	width: 30% !important;
 	}
 
+	/*HALAMAN KI KD INFO*/
+	.kikdmenu{
+		width:95% !important;
+		height: auto !important;
+	}
+	.kikdmenu li{
+		float:left !important;
+		font-size: 15px !important;
+		width: 30% !important;
+
+	}
+	.kikdmenu a{
+		border-radius: 5px !important;
+		font-size: 12px !important;
+		height: 70px !important;
+		text-align: center !important; 
+	}
+	.menuBeranda{
+		margin: 0 !important;
+		margin-top: 5px !important;
+	}
+	.kikdisi, .info{
+		width: 95% !important;
+		height:75% !important;
+	}
+	.kikdisi td{
+		font-size: 15px !important;
+		width: auto !important;
+	}
+	.kikdisi table, .info td{
+		font-size: 15px !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+	.info td{
+		border-bottom: 1px solid lightgrey;
+	}
+	.kikdisi h1, .info h1{
+		font-size: 20px !important;
+	}
+	.info p{
+		font-size: 15px !important;
+		margin: 10px !important;
+	}
 }
 
 @media only screen and (max-width: 372px) {

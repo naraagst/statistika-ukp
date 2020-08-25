@@ -56,8 +56,33 @@
 					]
 				}]
 			});
+			var chart5a = new CanvasJS.Chart("chartContainer5a", {
+				animationEnabled: true,
+				theme: "light2",
+				axisY: {
+					title: "Liter"
+				},
+				axisX: {
+					title: "Waktu (Jam)"
+				},
+				data: [{        
+					type: "line",  
+					showInLegend: true, 
+					legendText: "Perjalanan dari kota M ke kota N",     
+					dataPoints: [      
+						{ x: 4, y: 40, indexLabel: "A" },
+						{ x: 5, y: 20, indexLabel: "B" },
+						{ x: 6, y: 20, indexLabel: "C" },
+						{ x: 8, y: 10},
+						{ x: 8, y: 60, indexLabel: "D" },
+						{ x: 9, y: 50, indexLabel: "E" },
+						{ x: 10, y: 40, indexLabel: "F" },
+						{ x: 12, y: 10, indexLabel: "G" }
+					]
+				}]
+			});
 			chart5.render();
-
+			chart5a.render();
 			}
 
 	</script>
@@ -72,6 +97,12 @@
 		<div class="konten">
 			<div class="progressbar"></div>
 			<div class="subkonten">
+			<div class="conso hp">
+				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
+				<div id="chartContainer5" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
+				<p class="caption">Diagram 3. Data penggunaan bahan bakar</p>
+				<p style="color: red; font-size: 14;">*catatan: arahkan kursor ke setiap titik pada diagram untuk mengetahui jumlah data</p>
+			</div>
 			<div class="materi" >
 				<h2>Menganalisis Data</h2>
 				<div class="submateri" id="submateri">
@@ -187,7 +218,7 @@
 				</div>
 				
 			</div>
-			<div class="conso">
+			<div class="conso laptop">
 				<h3>Sajian Data Penggunaan Bahan Bakar terhadap Waktu</h3>
 				<div id="chartContainer5" style="height: 370px; max-width: 500px; margin: 0px auto;"></div>
 				<p class="caption">Diagram 3. Data penggunaan bahan bakar</p>
