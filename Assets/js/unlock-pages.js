@@ -1,33 +1,52 @@
 const materi1 = document.querySelector("#materi1");
-const materi2 = document.querySelector("#materi2");
-const materi3 = document.querySelector("#materi3");
-const latihan = document.querySelector("#latihan");
 const kuisa = document.querySelector("#kuisa");
+
+const materi2 = document.querySelector("#materi2");
+const mean = document.querySelector("#mean");
+const median = document.querySelector("#median");
+const modus = document.querySelector("#modus");
+const kuisb = document.querySelector("#kuisb");
+
+const materi3 = document.querySelector("#materi3");
+const jangkauan = document.querySelector("#jangkauan");
+const kuartil = document.querySelector("#kuartil");
+const interkuartil = document.querySelector("#interkuartil");
+const simpangan = document.querySelector("#simpangan");
+const kuisc = document.querySelector("#kuisc");
+
+const latihan = document.querySelector("#latihan");
+const unduh = document.querySelector("#unduh");
+
 
 let getPage = (idName, localName) => {
   const getLocal = localStorage.getItem(localName);
-   console.log(idName);
-  console.log(localName);
   if (getLocal != null) {
       idName.classList.remove("disabled");
   }
 };
 
 getPage(materi1, "materi1");
+getPage(kuisa, "ana4");
+
 getPage(materi2, "materi2");
-getPage(materi3, "materi3");
-getPage(latihan, "latihan");
 getPage(mean, "mean1");
 getPage(median, "mean4");
 getPage(modus, "median4");
 getPage(kuisb, "modus3");
-getPage(kuisa, "ana4");
+
+getPage(materi3, "materi3");
+getPage(jangkauan, "jangkauan1");
+getPage(kuartil, "jangkauan2");
+getPage(interkuartil, "kuartil2");
+getPage(simpangan, "inter1");
+getPage(kuisc, "inter3");
+
+getPage(latihan, "latihanakhir");
 getPage(unduh, "unduh");
 
 const kemajuan = localStorage.getItem("progress")
 const tampilProgress = kemajuan * (100/27)
 const convert = Math.ceil(tampilProgress)
-console.log(convert)
 const kemajuanBar = document.querySelector(".progAtas")
 
 kemajuanBar.style.width = `${convert}%`
@@ -51,6 +70,13 @@ const analisis1 = document.querySelector("#analisis1");
 const analisis2 = document.querySelector("#analisis2");
 const analisis3 = document.querySelector("#analisis3");
 const analisis4 = document.querySelector("#analisis4");
+const jangkauan1 = document.querySelector("#jangkauan1");
+const jangkauan2 = document.querySelector("#jangkauan2");
+const kuartil1 = document.querySelector("#kuartil1");
+const kuartil2 = document.querySelector("#kuartil2");
+const inter1 = document.querySelector("#inter1");
+const inter2 = document.querySelector("#inter2");
+const inter3 = document.querySelector("#inter3");
 
 let getPage2 = (idName, localName) => {
   const getLocal = localStorage.getItem(localName);
@@ -80,7 +106,17 @@ if(key === "mea"){
 	getPage2(analisis2, "materi1");
 	getPage2(analisis3, "ana2");
 	getPage2(analisis4, "ana3");
-}
+} else if (key === "jan"){
+	getPage2(jangkauan1, "jangkauan1");
+	getPage2(jangkauan2, "jangkauan1");
+} else if (key === "kua"){
+	getPage2(kuartil1, "jangkauan2");
+	getPage2(kuartil2, "kuartil1");
+} else if (key === "int"){
+	getPage2(inter1, "jangkauan2");
+	getPage2(inter2, "inter1");
+	getPage2(inter3, "inter2");
+} else{}
 
 // // _______________________________________________________________________________________________________
 // const medianL=document.querySelector("#median")

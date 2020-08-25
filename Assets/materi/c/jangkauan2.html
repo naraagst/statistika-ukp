@@ -224,6 +224,22 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/jangkauan2.js"></script>
 		<script src="../../js/latihan_jangkauan.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('kuartil1','kuartil1');
+				if(localStorage.getItem("progress") <=20){
+		      		localStorage.setItem("progress",20)
+		      	}
+
+		      	location.href = 'kuartil1.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

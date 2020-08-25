@@ -64,21 +64,3 @@ document.querySelector(".sidebar").innerHTML = `
 			</ul>
 `;
 
-document.querySelector(".progressbar").innerHTML = `
-	<div class="progteks">Progress : </div>
-	<div class="kemajuan">
-		<div id="kemajuan-bar" class="progAtas" style="width:0%">
-			0%
-		</div>
-	</div>
-`;
-
-
-const kemajuan = localStorage.getItem("progress")
-const tampilProgress = kemajuan * (100/12)
-const convert = Math.ceil(tampilProgress)
-console.log(convert)
-const kemajuanBar = document.querySelector(".progAtas")
-
-kemajuanBar.style.width = `${convert}%`
-kemajuanBar.innerHTML = `${convert}%`

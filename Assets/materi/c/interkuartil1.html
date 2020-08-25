@@ -98,6 +98,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/interkuartil1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('inter2','inter2');
+				if(localStorage.getItem("progress") <=23){
+		      		localStorage.setItem("progress",23)
+		      	}
+
+		      	location.href = 'interkuartil2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html> 

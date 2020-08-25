@@ -245,6 +245,22 @@
 		<script src="../../js/style.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="../../js/kuartil1.js"></script>
+		<script type="text/javascript">
+			const next = document.querySelectorAll('.lanjut');
+
+			next.forEach((item,index)=>{
+				next[index].addEventListener("click", function(e){
+				e.preventDefault();
+				localStorage.setItem('kuartil2','kuartil2');
+				if(localStorage.getItem("progress") <=21){
+		      		localStorage.setItem("progress",21)
+		      	}
+
+		      	location.href = 'kuartil2.html'
+				})
+			})
+			
+		</script>
 	</body>
 	
 </html>

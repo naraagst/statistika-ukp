@@ -104,14 +104,14 @@ document.addEventListener("DOMContentLoaded", function(){
         location.href = './index.html'
     })
     
-    nextt.addEventListener("click", function(){
+    nextt.addEventListener("click", function(e){
         e.preventDefault();
 
         localStorage.setItem("mean1","mean1");
         localStorage.setItem("materi2","materi2");
         
-        if(localStorage.getItem("progress") <=0){
-            localStorage.setItem("progress",0)
+        if(localStorage.getItem("progress") <=5){
+            localStorage.setItem("progress",5)
         }
         location.href = 'Assets/Materi/b/mean1.html'
         clearResults()

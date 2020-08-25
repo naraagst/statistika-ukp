@@ -44,11 +44,11 @@ document.querySelector(".sidebar").innerHTML = `
 						<div class="icon"><i class="fas fa-angle-down" style="font-size:25px;color:white;margin-right:10px;margin-top: -14px;"></i></div>
 					</a>
 					<div class="dropdown ${getShowClass("c")}" id="myDropdown2">
-				      <a href="../../c/jangkauan1.html" class="${getNavLinkClass("/Assets/materi/c/jangkauan1.html")}">1. Jangkauan</a>
-				      <a href="../../c/kuartil1.html" class="${getNavLinkClass("/Assets/materi/c/kuartil1.html")}">2. Kuartil</a>
-				      <a href="../../c/interkuartil1.html" class="${getNavLinkClass("/Assets/materi/c/interkuartil1.html")}">3. Jangkauan Interkuartil</a>
-				      <a href="../../c/simpangan1.html" class="${getNavLinkClass("/Assets/materi/c/simpangan1.html")}">4. Simpangan Kuartil</a>
-				      <a href="../../c/evaluasiC" class="${getChapClass("c")}">Kuis</a>
+				      <a href="../../c/jangkauan1.html" class="${getNavLinkClass("/Assets/materi/c/jangkauan1.html")}" id="jangkauan">1. Jangkauan</a>
+				      <a href="../../c/kuartil1.html" class="${getNavLinkClass("/Assets/materi/c/kuartil1.html")}" id="kuartil">2. Kuartil</a>
+				      <a href="../../c/interkuartil1.html" class="${getNavLinkClass("/Assets/materi/c/interkuartil1.html")}" id="interkuartil">3. Jangkauan Interkuartil</a>
+				      <a href="../../c/simpangan1.html" class="${getNavLinkClass("/Assets/materi/c/simpangan1.html")}" id="simpangan">4. Simpangan Kuartil</a>
+				      <a href="../../c/evaluasiC" class="${getChapClass("c")}" id="kuisc">Kuis</a>
 				    </div>
 				</li>
 				<li class="disabled" id="latihan"><a href="../../Latihan" class="${getChapClass("l")}"><i class="fas fa-edit" style="font-size:21px;color:white;margin-right:10px;margin-top: -14px;"></i>Latihan</a>

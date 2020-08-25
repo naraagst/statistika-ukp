@@ -2,38 +2,31 @@
 	<head>
 		<title>STATISTIKA</title>
 	
-		<link href="../../../css/statistik.css" rel="stylesheet">	
-		<link href="../../../css/materi2.css" rel="stylesheet">	
+		<link href="../../css/statistik.css" rel="stylesheet">	
+		<link href="../../css/materi2.css" rel="stylesheet">	
 		<link rel="stylesheet" href="style.css">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-		<link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
 		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 		});
 		</script>
-		<script type="text/javascript" async src="../../../MathJax-2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-		</script>
-		<script>
-			window.onload = function awal(){
-				
-
-			};
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 		</script>
 	</head>
 	<body>
 		<div class="header">
-			<img src="../../../gambar/logo.png" id="logo" style="float:left"/>
-			<a href="javascript:void(0);" class="iconmenu" onclick="sidebar()"><i class="fa fa-bars"></i></a>
+			<img src="../../gambar/logo.png" id="logo" style="float:left"/>
 		</div>
-		<div class="sidebar" id="sidebar">
+		<div class="sidebar">
 		</div>
 		<div class="konten">
-			<div class="ujikompetensi" style="margin-top:10px;">
+			<div class="ujikompetensi">
 				<div class="submateri2">
 					<div style="width:100%;display: block">
-					<h2 class="text-left" style="width:80%;float:left;">KUIS</h2>
+					<h2 class="text-left" style="width:80%;float:left;">Latihan</h2>
 					<div class="btn btn-md btn-dark text-right" id="time" style="float:right;">00 : 00</div> 
 					</div>
 					<div class="row" style="float: left;width: 100%">
@@ -47,7 +40,7 @@
 						</div>
 						<div class="soal">
 							<!-- column u/ tampil soal -->
-							<div class="card">
+							<div class="card ml-3">
 								<div class="card-body">
 									<div class="quiz-container">
 										<div id="quiz"></div>
@@ -67,14 +60,13 @@
 			</div>
 		</div>
 
-		<script src="../../../js/sidebardisable.js"></script>
-		<script src="../../../js/style.js"></script>
-		<script src="../../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
-		<script src="../../../bootstrap/js/bootstrap.min.js"></script>
-		<script src="script.js"></script>
+		<script src="../../js/sidebardisable.js"></script>
+		<script src="../../bootstrap/jquery/jquery-3.3.1.min.js"></script>
+		<script src="../../bootstrap/js/bootstrap.min.js"></script>
+		<script src="soal.js"></script>
 		<script>
 			let randomQuestion = myQuestions.sort((a,b) => {return 0.5 - Math.random()})
-			let sliceQuestion = randomQuestion.slice(0, 10)
+			let sliceQuestion = randomQuestion.slice(0, 15)
 			let numberBtn = document.querySelector(".number-btn")
 
 			for(i=0; i<sliceQuestion.length; i++){
@@ -146,6 +138,11 @@
 				sessionStorage.setItem('questionLength', sliceQuestion.length)
 				sessionStorage.setItem('correct', numCorrect)
 				sessionStorage.setItem('wrong', numWrong)
+
+				localStorage.setItem('unduh','unduh');
+				if(localStorage.getItem("progress") <=27){
+		      		localStorage.setItem("progress",27)
+		      	}
 				location.href = './hasil.html'
 			}
 
@@ -207,7 +204,7 @@
 			previousButton.addEventListener("click", showPreviousSlide)
 
 			let showTime = document.querySelector("#time")
-			let startMinute = 45
+			let startMinute = 60
 			let seconds = 0
 
 			function countdown(){

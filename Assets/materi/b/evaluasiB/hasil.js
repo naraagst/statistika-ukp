@@ -104,8 +104,15 @@ document.addEventListener("DOMContentLoaded", function(){
         location.href = './index.html'
     })
     
-    nextt.addEventListener("click", function(){
+    nextt.addEventListener("click", function(e){
+        e.preventDefault();
+
+        localStorage.setItem("jangkauan1","jangkauan1");
         localStorage.setItem("materi3","materi3");
+        
+        if(localStorage.getItem("progress") <=18){
+            localStorage.setItem("progress",18)
+        }
         location.href = '../../C/jangkauan1.html'
         clearResults()
     })
