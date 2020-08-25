@@ -1,6 +1,7 @@
 let correctAnswer = sessionStorage.getItem("correct")
 let wrongAnswer = sessionStorage.getItem("wrong")
-let nameUser = sessionStorage.getItem("name")
+let nameUser = sessionStorage.getItem("nama")
+let classUser = sessionStorage.getItem("kelas")
 let questionLength = sessionStorage.getItem("questionLength")
 let nextt = document.querySelector("#next")
 let kett = document.querySelector("#ket")
@@ -13,7 +14,7 @@ let result = {}
 
 let note
 let score = (parseInt(correctAnswer) / parseInt(questionLength)) * 100
-if(score >= 65) {
+if(score >= 60) {
     note = "Lulus"
     kett.style.color='green'
     kett.innerHTML = 'Selamat! Anda Telah Menyelesaikan Seluruh Materi pada Bab Statistika.'
@@ -26,6 +27,7 @@ if(score >= 65) {
 score = score < 100 ? score.toFixed(2) : score
 
 result.nameUser = nameUser
+result.classUser = classUser
 result.correctAnswer = correctAnswer
 result.wrongAnswer = wrongAnswer
 result.scoreUser = score
@@ -53,47 +55,31 @@ if(localStorage && localStorage.getItem('latihan')) {
 function clearResults() {
     sessionStorage.setItem("correct", "")
     sessionStorage.setItem("wrong", "")
-    sessionStorage.setItem("name", "")
+    sessionStorage.setItem("nama", "")
+    sessionStorage.setItem("kelas", "")
 }
 
-function resultsHistory(testNumber, nameUser, correctAnswer, wrongAnswer, scoreUser, noteUser) {
-    let resultsContainer = document.querySelector(".resultsContainer")
+function newResults(nameUser, classUser, numCorrect, numWrong, score) {
 
-    let tr = document.createElement('tr')
-    let html = `
-        <td>${testNumber}</td>
-        <td>${nameUser}</td>
-        <td>${correctAnswer}</td>
-        <td>${wrongAnswer}</td>
-        <td>${scoreUser}</td>
-        <td>${noteUser}</td>
-    `
-    tr.innerHTML = html
-    resultsContainer.appendChild(tr)
-}
+    let namaSiswa = document.querySelector("#namaSiswa")
+    let kelasSiswa = document.querySelector("#kelasSiswa")
+    let jawabanBenar = document.querySelector("#jawabanBenar")
+    let jawabanSalah = document.querySelector("#jawabanSalah")
+    let nilaiSiswa = document.querySelector("#nilaiSiswa")
 
-function newResults(numCorrect, numWrong, score) {
-
-    let newScore = document.querySelector("#new-score")
-    let wrongCorrect = document.querySelector("#wrong-correct")
-
-    newScore.innerHTML = `Skor yang anda peroleh<br/>${score}`
-    wrongCorrect.innerHTML =`Jawaban Benar: <b>${numCorrect}</b>, Jawaban Salah: <b>${numWrong}</b><hr>`
+    namaSiswa.innerHTML = `${nameUser}`
+    kelasSiswa.innerHTML = `${classUser}`
+    jawabanBenar.innerHTML = `${numCorrect}`
+    jawabanSalah.innerHTML = `${numWrong}`
+    nilaiSiswa.innerHTML = `${score}`
 }
 
 document.addEventListener("DOMContentLoaded", function(){
     let latihan = quizResults["results"].length
     let testNumber = 1
 
-    for(let i=0; i<latihan; i++) {
-        if(quizResults["results"][i].correctAnswer != "" && quizResults["results"][i].wrongAnswer != "") {
-            resultsHistory(testNumber, quizResults["results"][i].nameUser, quizResults["results"][i].correctAnswer, quizResults["results"][i].wrongAnswer, quizResults["results"][i].scoreUser, quizResults["results"][i].noteUser)
-        }
-        testNumber++
-    }
-
     if(result.nameUser != ""){
-        newResults(quizResults["results"][latihan-1].correctAnswer, quizResults["results"][latihan-1].wrongAnswer, quizResults["results"][latihan-1].scoreUser)
+        newResults(quizResults["results"][latihan-1].nameUser, quizResults["results"][latihan-1].classUser, quizResults["results"][latihan-1].correctAnswer, quizResults["results"][latihan-1].wrongAnswer, quizResults["results"][latihan-1].scoreUser)
     }
 
     let tryAgain = document.querySelector("#try-again")

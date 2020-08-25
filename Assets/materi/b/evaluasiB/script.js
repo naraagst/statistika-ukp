@@ -90,7 +90,7 @@ const myQuestions = [
 		correctAnswer:"c"
 	},
 	{
-		question:"<p>Diketahui kelompok bilangan 2, 3, 7, 7, 8, 8, 8, 9, 11.</p><p>(1) Modus lebih dari rata-rata.<br/>(2) Median kurang dari rata-rata.<br/>(3) Modus sama dengan rata-rata.<br/>(4) Modus sama dengan median.</p><p>Pernyataan yang benar adalah ...</p>",
+		question:"Diketahui kelompok bilangan 2, 3, 7, 7, 8, 8, 8, 9, 11.<br/><p>(1) Modus lebih dari rata-rata.<br/>(2) Median kurang dari rata-rata.<br/>(3) Modus sama dengan rata-rata.<br/>(4) Modus sama dengan median.</p><p>Pernyataan yang benar adalah ...</p>",
 		answers:{
 			"a": "(1), (2), dan (3)",
 	        "b": "(1) dan (3)",

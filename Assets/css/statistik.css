@@ -572,7 +572,13 @@ a{
 .identitas-kuis{
 	font-family: Muli;
 }
-
+.tabel-hasil{
+	width: 41% !important;
+}
+.tabelkuis td{
+	font-weight: bold;
+	font-family: Muli;
+}
 @media only screen and (max-width: 500px) {
 	body{
 		height: auto;
@@ -749,6 +755,9 @@ a{
 	.fontt{
 		font-size: 13px !important;
 	}
+	.boldd{
+		font-weight: bold !important;
+	}
 	.submateri p{
 		margin-bottom: 5px !important;
 	}
@@ -782,16 +791,26 @@ a{
 		width:100% !important;
 		padding: 0 !important;
 		margin:0 0 0 2% !important;
+
 	}
 	.quiz-container{
-		height: 500px !important;
+		height: 490px !important;
+
 	}
 	#quiz img{
 		width: 100% !important;
 	}
+	#quiz, #quiz p, .answers{
+		font-size: 16px !important;
+		text-align: justify;
+	}
 	.nosoal{
 		width: 18% !important;
 	}
+	.tabel-hasil{
+	width: 30% !important;
+	}
+
 }
 
 @media only screen and (max-width: 372px) {
@@ -806,7 +825,7 @@ a{
 	}
 
 }
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
 	width:11px;
 	background: #ffffff;
 }
@@ -819,7 +838,7 @@ a{
 
 ::-webkit-scrollbar-track {      
     background: lightgrey;    
-}
+}*/
 
 
 
