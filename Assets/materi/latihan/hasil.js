@@ -1,3 +1,5 @@
+let tanggal = sessionStorage.getItem("tanggal")
+let waktu = sessionStorage.getItem("waktu")
 let correctAnswer = sessionStorage.getItem("correct")
 let wrongAnswer = sessionStorage.getItem("wrong")
 let nameUser = sessionStorage.getItem("nama")
@@ -30,6 +32,8 @@ result.nameUser = nameUser
 result.classUser = classUser
 result.correctAnswer = correctAnswer
 result.wrongAnswer = wrongAnswer
+result.tanggal = tanggal
+result.waktu = waktu
 result.scoreUser = score
 result.noteUser = note
 
@@ -57,16 +61,22 @@ function clearResults() {
     sessionStorage.setItem("wrong", "")
     sessionStorage.setItem("nama", "")
     sessionStorage.setItem("kelas", "")
+    sessionStorage.setItem("tanggal", "")
+    sessionStorage.setItem("waktu", "")
 }
 
-function newResults(nameUser, classUser, numCorrect, numWrong, score) {
+function newResults(tanggal, waktu, nameUser, classUser, numCorrect, numWrong, score) {
 
+    let tanggalSkrg = document.querySelector("#tanggal")
+    let waktuSkrg = document.querySelector("#waktu")
     let namaSiswa = document.querySelector("#namaSiswa")
     let kelasSiswa = document.querySelector("#kelasSiswa")
     let jawabanBenar = document.querySelector("#jawabanBenar")
     let jawabanSalah = document.querySelector("#jawabanSalah")
     let nilaiSiswa = document.querySelector("#nilaiSiswa")
 
+    tanggalSkrg.innerHTML = `${tanggal}`
+    waktuSkrg.innerHTML = `${waktu}`
     namaSiswa.innerHTML = `${nameUser}`
     kelasSiswa.innerHTML = `${classUser}`
     jawabanBenar.innerHTML = `${numCorrect}`
@@ -79,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let testNumber = 1
 
     if(result.nameUser != ""){
-        newResults(quizResults["results"][latihan-1].nameUser, quizResults["results"][latihan-1].classUser, quizResults["results"][latihan-1].correctAnswer, quizResults["results"][latihan-1].wrongAnswer, quizResults["results"][latihan-1].scoreUser)
+        newResults(quizResults["results"][latihan-1].tanggal, quizResults["results"][latihan-1].waktu, quizResults["results"][latihan-1].nameUser, quizResults["results"][latihan-1].classUser, quizResults["results"][latihan-1].correctAnswer, quizResults["results"][latihan-1].wrongAnswer, quizResults["results"][latihan-1].scoreUser)
     }
 
     let tryAgain = document.querySelector("#try-again")
@@ -87,4 +97,31 @@ document.addEventListener("DOMContentLoaded", function(){
         location.href = './index.html'
     })
 })
+
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyA0bSfBNKA4Y3oDbiorSA8dYrI6X7thQpI",
+    authDomain: "statistika-smp.firebaseapp.com",
+    databaseURL: "https://statistika-smp.firebaseio.com",
+    projectId: "statistika-smp",
+    storageBucket: "statistika-smp.appspot.com",
+    messagingSenderId: "221055005685",
+    appId: "1:221055005685:web:6704d25858af96560426bc",
+    measurementId: "G-SD240GBRWE"
+  };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+let data = {
+    nama : nameUser,
+    kelas : classUser,
+    nilai : score,
+    tanggal : tanggal,
+    waktu : waktu
+}
+
+const database = firebase.database();
+database.ref("latihan").push(data);
 
