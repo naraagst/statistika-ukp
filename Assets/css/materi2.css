@@ -359,6 +359,9 @@
 	padding:15px;
 }
 
+.rumusmedianganjil{
+	font-size: 20px;
+}
 #pilihan_a, #pilihan_b, #pilihan_c, #pilihan_d{
 	width:48%;
 	height:50px;
@@ -415,7 +418,7 @@
 
 .tabelkecil table, .tabelkecil th, .tabelkecil tr, .tabelkecil td{
 	padding: 3px !important;
-	width:300px !important;
+	width:300px;
 	margin: 20px;
 }
 #hid_mdn{
@@ -572,7 +575,6 @@
 	width:102%;
 	height:85%;
 	margin-left: -10px;
-	margin-top: -30px;
 	overflow-y: auto;
 }
 .consonav img{

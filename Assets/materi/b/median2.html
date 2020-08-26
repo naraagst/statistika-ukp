@@ -26,6 +26,7 @@
 		<script>
 			window.onload = function awal(){
 				document.getElementById("cmean1").style="border:5px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
+				document.getElementById("cmean1a").style="border:2px solid rgb(0,156,255, 0.5);border-bottom: none;background-color: white;";
 				document.getElementById("cobamodus").hidden=true;
 
 			};
@@ -59,9 +60,13 @@
 				</div>
 			</div>
 			<div class="conso" id="conso"  style="overflow-y: hidden;">
-				<div class="btn-group2">
+				<div class="btn-group2 laptop">
 					<a onclick="consomean()" id="cmean1">Contoh Soal</a>
 					<a onclick="cobamean()" id="cmean2">Pertanyaan</a>
+				</div>
+				<div class="btn-group2 hp">
+					<a onclick="consomean()" id="cmean1a">Contoh Soal</a>
+					<a onclick="cobamean()" id="cmean2a">Pertanyaan</a>
 				</div>
 				<div id="containermodus">
 					<div id="consomodus">
