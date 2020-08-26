@@ -187,6 +187,10 @@ a{
 	display:block !important;
 }
 
+.opa{
+	opacity: 10% !important;
+}
+
 .hide{
 	display: none;
 }
@@ -607,7 +611,61 @@ a{
 #gbrk2, #gbrk3, #gbrk4{
 		width: 70%;
 	}
-
+.w-25{
+	width:25%;
+}
+@media only screen and (max-width: 1212px) and (min-width: 500px) {
+	body{
+		height: 700px !important;
+		overflow: auto !important;
+	}
+	.konten{
+		width: 100% !important;
+		height: auto !important;
+	}
+	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: auto !important;
+		display: none;
+		z-index: 99;
+	}
+	.iconmenu{
+		display: block !important;
+	}
+	.subkonten{
+		width: 100% !important;
+		height: 80% !important;
+		margin-bottom: 0 !important;
+	}
+	.materi{
+		width:48% !important;
+		margin-left: 0.5% !important;
+		margin-right: 0 !important;
+		height: 100% !important;
+		padding-bottom: 10px;
+	}
+	.submateri{
+		height: 92% !important;
+	}
+	.conso{
+		width:48% !important;
+		margin-left: 1% !important;
+		padding: 0px 0px 10px 0px;
+		height: 100% !important;
+		margin-bottom: 5px !important;
+		overflow-x: auto !important;
+	}
+	#logo{
+		width: auto;
+	}
+	.header{
+		height: 60px;
+	}
+	.btn-group{
+		margin-top: 0 !important
+	}
+}
 @media only screen and (max-width: 500px) {
 	body{
 		height: auto;
@@ -738,7 +796,7 @@ a{
 	}
 	.btn-group2 a{
 		width:40% !important;
-		font-size: 4vw !important;
+		font-size: 16px !important;
 	}
 	.materi{
 		margin-bottom: 5px;
@@ -960,6 +1018,9 @@ a{
 	}
 	.w-50{
 		width: 80%;
+	}
+	.w-25{
+		width:100px !important;
 	}
 	.rumusmodus{
 		background-color: lightblue !important;

@@ -21,7 +21,7 @@ const getShowClass = (path) => {
 };
 
 const getDisabledClass = (path) => {
-  return this.location.pathname.substr(21, 1) === path ? " disabledhal" : "";
+  return this.location.pathname.substr(25, 1) === path ? " disabledhal" : "";
 };
 
 const getDisableClass = (path) => {
@@ -118,9 +118,12 @@ if (key === "mea"){
 	if (tambah==4){ nextMateri = "median1.html" } 
 	else {nextMateri = "mean"+tambah+".html";}
 
+	if (kurang==0){ prevMateri = "../a/analisis5.html" } 
+	else {prevMateri = "mean"+kurang+".html";}
+
 	document.querySelector(".halaman").innerHTML=`
 				<div class="btn-group">
-					<a href="mean${kurang}.html" class="${getDisabledClass("1")}"><< Sebelumnya</a>
+					<a href="${prevMateri}"><< Sebelumnya</a>
 					<a href="mean1.html" class="${getPagesClassMean1("mean1")} disabledhal" id="mean1">1</a>
 					<a href="mean2.html" class="${getPagesClass("mean2.html")} ${getUnlockClassMean1("mean1")} disabledhal" id="mean2">2</a>
 					<a href="mean3.html" class="${getPagesClass("mean3.html")} ${getUnlockClass("mean2.html")} disabledhal" id="mean3">3</a>
@@ -180,7 +183,7 @@ if (key === "mea"){
 
 	document.querySelector(".halaman").innerHTML=`
 				<div class="btn-group">
-					<a href="${prevMateri}"><< Sebelumnya</a>
+					<a href="${prevMateri}"  class="${getDisabledClass("1")}"><< Sebelumnya</a>
 					<a href="analisis1.html" class="${getPagesClassAnalisis1("analisis1")} disabledhal" id="analisis1">1</a>
 					<a href="analisis2.html" class="${getPagesClass("analisis2.html")} ${getUnlockClassAnalisis1("analisis1")} disabledhal" id="analisis2">2</a>
 					<a href="analisis4.html" class="${getPagesClass("analisis4.html")} ${getUnlockClass("analisis2.html")} disabledhal" id="analisis3">3</a>

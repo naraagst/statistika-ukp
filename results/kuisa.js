@@ -13,8 +13,22 @@
   firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
-var data = database.ref('/statistika-smp/kuis-a');
+var data = database.ref('kuis-a');
+var index = 0;
 data.on('value', function(snapshot) {
-  console.log(snapshot)
+  snapshot.forEach(function(childSnapshot) {
+    index+=1;
+    var hasil = childSnapshot.val();
+    var tblData = document.getElementById("data");
+    tblData.innerHTML += `
+      <tr>
+        <td>${index}.</td>
+        <td>${hasil.nama}</td>
+        <td>${hasil.kelas}</td>
+        <td>${hasil.nilai}</td>      
+        <td>${hasil.tanggal} ${hasil.waktu}</td>      
+      </tr>
+    `
+  })
 });
 

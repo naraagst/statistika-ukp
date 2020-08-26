@@ -12,9 +12,21 @@
 .content .tabel table{
 	width: 50%;
 	margin-top: 20px;
+	background-color: white;
 }
 
 .content .tabel th, .content .tabel td{
 	font-size: 18px;
-	width: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+	.content .tabel th, .content .tabel td{
+	font-size: 14px;
+	}
+	.content .tabel table{
+	width: 100%;
+	}
+	.content h1{
+	font-size:22px;
+	}
 }
