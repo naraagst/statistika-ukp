@@ -17,8 +17,7 @@
 		</div>
 		<div class="content">
 			<center>
-			<h1>Hasil Kuis A</h1>
-			<h1>Menganalisis Data</h1>
+			<h1>Hasil Pretest</h1>
 			<div class="tabel">
 				<table>
 					<thead>
@@ -60,7 +59,7 @@
 		  firebase.initializeApp(firebaseConfig);
 
 		var database = firebase.database();
-		var data = database.ref('kuis-a');
+		var data = database.ref('pretest');
 		var index = 0;
 		data.on('value', function(snapshot) {
 		  snapshot.forEach(function(childSnapshot) {
