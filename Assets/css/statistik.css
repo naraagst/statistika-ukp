@@ -614,6 +614,10 @@ a{
 .w-25{
 	width:25%;
 }
+.m-min15{
+	margin-right:-15px;
+}
+
 @media only screen and (max-width: 1212px) and (min-width: 500px) {
 	body{
 		height: 100% !important;
@@ -961,6 +965,9 @@ a{
 	}
 	#isi{
 		font-size: 18px;
+	}
+	.m-min15{
+		margin-right:0px !important;
 	}
 
 	/*MEAN*/
