@@ -9,6 +9,7 @@ let h=0;
 let i=0;
 let j=0;
 let k=0;
+let consoContainer = document.querySelector("#conso");
 
 function urut1(){
 	x1=parseInt(document.getElementById("input_kuartil1").value);
@@ -405,8 +406,10 @@ var html;
 function contoh1(){
 	document.getElementById("consokuartil1").hidden = false;
 	document.getElementById("consokuartil2").hidden = true;
+	consoContainer.scrollIntoView();
 }
 function contoh2(){
 	document.getElementById("consokuartil1").hidden = true;
 	document.getElementById("consokuartil2").hidden = false;
+	consoContainer.scrollIntoView();
 }

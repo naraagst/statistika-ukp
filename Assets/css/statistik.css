@@ -780,10 +780,10 @@ a{
 		line-height: 15px !important;
 	}
 	.langkahmean2{
-		font-size: 3vw !important;
+		font-size: 12px !important;
 	}
 	.tiga td, .tiga input{
-	font-size: 3vw !important;
+	font-size: 12px !important;
 	}
 	.langkahmean3{
 		width:60px !important;
@@ -813,7 +813,7 @@ a{
 		display: inline-block;
 	}
 	#rumusmean td, #rumusmean table{
-	font-size:3vw !important;
+	font-size:13px !important;
 	}
 	.rataratamean{
 		width: auto !important;
@@ -997,6 +997,9 @@ a{
 	#letak img{
 	width:90% !important;
 	}
+	#satu, #dua, #tiga{
+		margin-left:20px !important;
+	}
 
 	/*MEDIAN*/
 	.font2 table tr td, .font2 th{
@@ -1065,6 +1068,15 @@ a{
 	}
 	.bigtabel td, .bigtabel th{
 		font-size:14px !important;
+	}
+	.bigpad td{
+		padding:0px 5px !important;
+	}
+	.angka td{
+		font-size: 13px !important;
+	}
+	#input_kuartil1{
+		margin-left: 10px;
 	}
 }
 
