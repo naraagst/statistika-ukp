@@ -3,26 +3,31 @@
 		{
 			"soal":"Data banyak beras dalam karung di sebuah gudang sebagai berikut.",
 			"gbr":"<center><img src='../../gambar/latmean4.jpg' style='width:70%'/></center><p>Berapakah rata-rata berat beras dalam karung di gudang tersebut?</p>",
+			"pembahasan":"<img src='https://i.ibb.co/fxh5bYV/mean2a.jpg' alt='mean2a' border='0'>",
 			"jwb":17.75
 		},
 		{
 			"soal":"Data nilai ulangan IPA kelas VIII disajikan dalam diagram berikut.",
 			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Berapakah rata-rata nilai siswa perempuan?</p>",
+			"pembahasan":"<img src='https://i.ibb.co/ws09N4P/mean2b.jpg' alt='mean2b' border='0'>",
 			"jwb":7.93
 		},
 		{
 			"soal":"Perhatikan tabel nilai siswa kelas 8E berikut.",
 			"gbr":"<center><div class='tabel fontt'><table><tr><th>Nilai</th><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>Frekuensi</th><td>3</td><td>8</td><td>10</td><td>11</td><td>6</td><td>2</td></tr></table></div></center><p>Berapakah banyak siswa yang mendapat nilai di atas rata-rata?</p>",
+			"pembahasan":"<img src='https://i.ibb.co/Xj3dPfJ/mean2c.jpg' alt='mean2c' border='0'>",
 			"jwb":19
 		},
 		{
 			"soal":"Berikut ini adalah data panjang potongan sekumpulan pipa.<br/>",
 			"gbr":"<div class='tabel' style='margin-top:10px;'><center><table><tr><th>Potongan Pipa (cm)</th><th>Banyak Potongan Pipa</th></tr><tr><td>5</td><td>5</td></tr><tr><td>5.5</td><td>4</td></tr><tr><td>6</td><td>8</td></tr><tr><td>6.5</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>7.5</td><td>9</td></tr></table></center></div><p>Berapakah rata-rata panjang sekumpulan potongan pipa tersebut?</p>",
+			"pembahasan":"<img src='https://i.ibb.co/jhDyz0V/mean2d.jpg' alt='mean2d' border='0'>",
 			"jwb":6.42
 		},
 		{
 			"soal":"Data nilai ulangan IPA kelas VIII disajikan dalam diagram berikut.",
 			"gbr":"<center><img src='../../gambar/latmean3.jpg' style='width:70%'/></center><p>Berapakah rata-rata nilai siswa laki-laki?</p>",
+			"pembahasan":"<img src='https://i.ibb.co/Xp5dzqr/mean2e.jpg' alt='mean2e' border='0'>",
 			"jwb":7.76
 		}
 	]
