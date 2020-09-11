@@ -25,6 +25,13 @@ if(score >= 60) {
     ulangi.style.display='none'
     kett.style.color='green'
     kett.innerHTML = 'Selamat! Anda bisa melanjutkan ke materi selanjutnya.'
+
+    localStorage.setItem("mean1","mean1");
+    localStorage.setItem("materi2","materi2");
+        
+    if(localStorage.getItem("progress") <=5){
+       localStorage.setItem("progress",5)
+    }
 } else {
     note = "Tidak Lulus"
     nextt.style.display='none'
@@ -107,12 +114,6 @@ document.addEventListener("DOMContentLoaded", function(){
     nextt.addEventListener("click", function(e){
         e.preventDefault();
 
-        localStorage.setItem("mean1","mean1");
-        localStorage.setItem("materi2","materi2");
-        
-        if(localStorage.getItem("progress") <=5){
-            localStorage.setItem("progress",5)
-        }
         location.href = '/Assets/Materi/b/mean1.html'
         clearResults()
     })
