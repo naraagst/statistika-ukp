@@ -1,6 +1,6 @@
 .materi2{
 	width:95%;
-	height: 87%;
+	height: 83%;
 	background-color: white;
 	margin: 10px;
 	margin-left: 27px;
@@ -52,13 +52,11 @@
 }
 
 .langkahmean2{
-	width:60%;font-size: 18px;font-weight:bold;padding:1%
+	width:60%;font-weight:bold;padding:1%
 }
 
 .angka, .angka td{
 	font-weight:bold;
-	font-size: 20px;
-	line-height: 35px;
 	margin-top: 25px;
 }
 

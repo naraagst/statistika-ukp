@@ -150,6 +150,18 @@
 
 				slides[currentSlide].classList.remove('active-slide')
 				slides[n].classList.add('active-slide')
+
+					const answerContainers = questionContainer.querySelectorAll('.answers')
+					const answerContainer = answerContainers[currentSlide]
+
+					const selector = `input[name=question${currentSlide}]:checked`
+					const userAnswer = (answerContainer.querySelector(selector) || {}).value
+
+					if(userAnswer!=undefined){
+						nosoal[currentSlide].classList.add('btn-success')
+						nosoal[currentSlide].classList.add('nosoal2')
+					}
+					
 				currentSlide = n
 
 				if(currentSlide === 0){
